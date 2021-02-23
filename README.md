@@ -1,2 +1,5 @@
-# Group-Project
-Final project for Project Management
+# WildLands
+Group project for Project Management
+
+Active Team:
+* Peter Coyne
