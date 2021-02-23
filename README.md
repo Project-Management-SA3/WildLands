@@ -1,5 +1,5 @@
 # WildLands
 Group project for Project Management
 
-Active Team:
+## Active Team:
 * Peter Coyne
