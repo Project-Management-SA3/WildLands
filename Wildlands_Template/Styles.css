@@ -1,0 +1,77 @@
+/* Styles Sheet */
+nav	{		
+	position: fixed !important;
+	top: 10; 
+	z-index: 9999;}
+.topBar	{	
+	background: rgba(0,0,0,0.1);
+	}
+.navButtons	{
+	padding: 10px; 
+	font-family: 'Questrial', sans-serif; 
+	color: #d4a677d2; 
+	font-size:140%;
+	align-items: baseline;
+	}
+.footer	{	
+	height: 50px; 
+	text-align: center;
+	color: rgb(201, 201, 201);
+	}
+.homePage{
+	background-image: url("Photos/HomePage_Landscape.jpg");
+	background-size: cover;
+	}
+.about {
+	background-image: url("Photos/AboutUs_Landscape.jpg");
+	background-size: cover;
+	}
+.centerLogo 
+	{
+	display: block;
+	margin-left: 500px;
+	width: 50%;
+	}
+
+.navbar {
+	position: relative;
+	}
+#animation {
+    width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+	}
+@keyframes example {
+  0%   {width:200px; height: 200px}
+	}
+.noOverflow {
+	margin: 0; height: 100%; overflow: hidden
+	}
+.square {
+  	height: 50px;
+  	width: 250px;
+	border: solid green 2px;
+	border-radius: 5px;
+  	background-color: rgba(100, 175, 200, 0);
+	text-align: center;
+	margin-left: 250px;
+	margin-top: 80px;
+	line-height: 40px;
+  	vertical-align:middle;
+	float: right;
+	}
+/* .submitButton {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Single Day', cursive;
+	color: rgb(66, 130, 116);
+	border: 2px solid rgb(66, 130, 116);
+	padding: 10px;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out 100ms;
+	display: block;
+	width: 150px;
+	} */
