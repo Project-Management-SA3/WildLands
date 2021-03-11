@@ -16,54 +16,80 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Single+Day&display=swap" rel="stylesheet">
-
+    <!-- Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Home</title>
 
 	<style>
          /* Ref Styles.css */
 	</style>
+
+    <script>
+        let showMenu = false;
+
+        function toggleMenu() {
+            if (showMenu === false) {
+                $("#p-quickaccess").show(400);
+                showMenu = true;
+            } else {
+                $("#p-quickaccess").hide(400);
+                showMenu = false;
+            }
+        }
+    </script>
   </head>
   <body class="homePage" class="noOverFlow">
 
 	<!-- Top bar: Burger icon, logo and About Us icon -->
     <nav class="p-nav">
 
-        <!-- Burger icon, TODO @petercoyne menu -->
-        <a href="#" class="p-nav-a">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </a>
+        <div class="p-nav-left">
+            <!-- Burger icon, TODO @petercoyne menu -->
+            <a href="#" class="p-nav-a" onclick="toggleMenu()">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </a>
+            <!-- Site logo -->
+            <a href="home.html" class="p-logo">
+                <img src="./Logos/logo-no-text.png" alt="Logo">
+                <div>
+                    <h1>Wild<b>Lands</b></h1>
+                    <p>Endless Discoveries</p>
+                </div>
+            </a>
+        </div>
 
-        <!-- Site logo -->
-        <a href="home.html" class="p-logo">
-            <img src="./Logos/logo-no-text.png" alt="Logo">
+        <div class="p-contact">
+            <a href="www.facebook.com"><img src="Logos/facebook.png" width="22" alt="Loc"></a>
+            <a href="www.instagram.com"><img src="Logos/insta.png" width="30" alt="Loc"></a>
             <div>
-                <h1>Wild<b>Lands</b></h1>
-                <p>Endless Discoveries</p>
+                <img src="Logos/location.png" alt="Loc"> 31 Mallstreet, Galway
             </div>
-        </a>
+            <div>
+                <img src="Logos/phone.png" alt="Loc"> 091 312 543
+            </div>
+        </div>
 
-        <!-- About Us link -->
+        <!-- About Us link
         <a href="about.html" class="p-nav-a">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </a>
+        </a> -->
 
     </nav>
     <!-- Border below navbar -->
-    <hr style="border: 1px solid white; margin: -1rem 3rem 0" />
+    <hr style="border: 1px solid black; margin: 0" />
 
-    <div class="p-contact">
-        <a href="www.facebook.com"><img src="Logos/facebook.png" width="22" alt="Loc"></a>
-        <a href="www.instagram.com"><img src="Logos/insta.png" width="30" alt="Loc"></a>
-        <div>
-            <img src="Logos/location.png" alt="Loc"> 31 Mallstreet, Galway
-        </div>
-        <div>
-            <img src="Logos/phone.png" alt="Loc"> 091 312 543
+    <!-- Quick Access menu -->
+    <div id="p-quickaccess" style="display: none">
+        <a href="#" class="p-menuclose" onclick="toggleMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </a>
+        <div class="p-content">
+            <h1>Home</h1>
+            <h1>About Us</h1>
+            <h1>Counties</h1>
         </div>
     </div>
-    <!-- Border below contact -->
-    <hr style="border: 1px solid white; margin: 0 3rem 0" />
 
     <!-- Main Body of page -->
 	<div class="container" style="text-align: right;">
