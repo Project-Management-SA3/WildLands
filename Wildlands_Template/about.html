@@ -52,6 +52,23 @@
             </div>
             </div>
         </div>
+	<!--contact form area -->
+  <div class="container-fluid">
+    <form name=contactForm id="contactForm" onsubmit="formSubmit()" class="formContent">
+  
+      <label class="formTitle" for="name">Contact Name</label><br>
+      <input class="formBox" type="text" id="name" name="contactName" placeholder="Your Name here.."><br>
+  
+      <label class="formTitle" for="contactEmail">Email Address</label><br>
+      <input class="formBox" type="email" id="contactEmail" name="contactEmail" placeholder="Your contact email.."><br>
+  
+      <label class="formTitle" for="subject">Subject</label><br>
+      <textarea class="formBox" id="subject" name="subject" placeholder="What would you like to ask us" style="height:200px"></textarea><br>
+  
+      <input type="submit" class="submitButton" value="Submit"><br>
+  
+    </form>
+  </div>
 
   <!-- footer at bottom margin -->
   <div class="container-fluid mb-0">
@@ -60,6 +77,23 @@
     </div>
   </div>
 
-  </body>
+  <script>
+// form submission check and notification
+    function formSubmit() {
+      var nameV=document.contactForm.name.value;
+      var emailV=document.contactForm.contactEmail.value;
+      var messageV=document.contactForm.subject.value;
+      
+      if(nameV == "" || emailV == "" || messageV == "" )
+      {
+        alert('Please fill in all areas');
+      }
+      else{
+        alert('Thanks ' + nameV + ', we will be back to you shortly');
+      }
+    }
+    </script>
+
+</body>
 
 </html>
