@@ -1,41 +1,19 @@
 /* Styles Sheet */
-nav	{		
-	position: fixed !important;
-	top: 10; 
-	z-index: 9999;}
-.topBar	{	
-	background: rgba(0,0,0,0.1);
-	}
-.navButtons	{
-	padding: 10px; 
-	font-family: 'Questrial', sans-serif; 
-	color: #d4a677d2; 
-	font-size:140%;
-	align-items: baseline;
-	}
+
 .footer	{	
 	height: 50px; 
 	text-align: center;
 	color: rgb(201, 201, 201);
 	}
 .homePage{
-	background-image: url("Photos/HomePage_Landscape.jpg");
+	background: url("Photos/HomePage_Landscape.jpg") no-repeat center center fixed;
 	background-size: cover;
 	}
 .about {
-	background-image: url("Photos/AboutUs_Landscape.jpg");
+	background: url("Photos/AboutUs_Landscape.jpg") no-repeat center center fixed;
 	background-size: cover;
 	}
-.centerLogo 
-	{
-	display: block;
-	margin-left: 500px;
-	width: 50%;
-	}
 
-.navbar {
-	position: relative;
-	}
 #animation {
     width: 100px;
   height: 100px;
@@ -93,4 +71,106 @@ nav	{
 	transition: all 0.5s ease-in-out 100ms;
 	display: block;
 	width: 150px;
+
 	} 
+
+	} */
+.p-nav {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+
+.p-nav-left {
+	display: flex;
+}
+
+.p-nav-a {
+	display: inline-block;
+	padding: 3rem;
+	color: white;
+	transition: color 1s;
+}
+
+.p-nav-a:hover {
+	color: rgb(163, 190, 137);
+}
+
+.p-nav svg {
+	width: 2rem;
+}
+
+.p-nav .p-logo {
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+.p-logo:hover {
+	text-decoration: none;
+}
+
+.p-nav .p-logo img {
+	height: 4rem;
+	margin-right: 0.5rem;
+}
+
+.p-nav .p-logo h1 {
+	font-size: 1.6rem;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+
+.p-nav .p-logo p {
+	font-size: 0.7rem;
+	margin-bottom: 0;
+}
+
+.p-contact {
+	/* background-color: rgba(0,0,0,0.5); */
+	padding: 0.5rem 0;
+	margin: 0 3rem;
+	display: flex;
+	justify-content: space-evenly;
+	color: white;
+	font-size: 0.8rem;
+	align-items: center;
+}
+
+.p-contact > * {
+	padding: 1rem;
+	flex-shrink: 0;
+}
+	
+.p-contact img {
+	filter: invert(1);
+}
+
+#p-quickaccess {
+	background: rgba(255,255,255,0.7);
+	backdrop-filter: blur(10px);
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	right: 2rem;
+
+	border-radius: 1rem;
+	z-index: 90;
+}
+
+.p-menuclose {
+	display: block;
+	color: black;
+	padding: 1rem;
+}
+
+.p-menuclose svg {
+	width: 2rem;
+}
+
+#p-quickaccess .p-content {
+	padding: 1rem;
+	text-align: center;
+}
+
