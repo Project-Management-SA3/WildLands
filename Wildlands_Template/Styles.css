@@ -40,18 +40,40 @@
   	vertical-align:middle;
 	float: right;
 	}
-/* .submitButton {
+.formContent {
+	margin-left: auto;
+	margin-right: 20%;
+	margin-bottom: fixed;
+	font-family: 'Questrial', sans-serif;
+	color: rgb(24, 202, 77);
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out 100ms;
+	display: block;
+	width: 150px;}
+.formBox {
+	padding: 5px;
+	border-radius: 8px;
+}
+.formTitle {
+	text-align: center ;
+	text-decoration: wavy;
+}
+.submitButton {
 	margin-left: auto;
 	margin-right: auto;
-	font-family: 'Single Day', cursive;
-	color: rgb(66, 130, 116);
-	border: 2px solid rgb(66, 130, 116);
+	font-family: 'Questrial', sans-serif;
+	color: rgb(24, 202, 77);
+	border: 2px solid rgb(24, 202, 77);
 	padding: 10px;
 	border-radius: 8px;
 	text-decoration: none;
 	transition: all 0.5s ease-in-out 100ms;
 	display: block;
 	width: 150px;
+
+	} 
+
 	} */
 .p-nav {
 	color: white;
@@ -151,3 +173,4 @@
 	padding: 1rem;
 	text-align: center;
 }
+
