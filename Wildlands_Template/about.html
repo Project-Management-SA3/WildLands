@@ -17,14 +17,26 @@
   <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Single+Day&display=swap" rel="stylesheet">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>About Us</title>
 
+    <script>
+      let showMenu = false;
 
+      function toggleMenu() {
+          if (showMenu === false) {
+              $("#p-quickaccess").show(400);
+              showMenu = true;
+          } else {
+              $("#p-quickaccess").hide(400);
+              showMenu = false;
+          }
+      }
+  </script>
 	<style>
     /* Ref Styles.css */
 	
-	p { color: white; 
+	.aboutdetails p { color: white; 
 	    position:absoulte;
 	    text-align: center;
 		font-size: 30px;}
@@ -33,57 +45,94 @@
   </head>
   <body class="about" class="noOverFlow">
 
-	<!--Bar at top with contact details, account and cart -->
-  <div class="container-fluid topBar">
-    <div class="row">
-            <div class="container-fluid ">
-                <nav class="navbar text-left">
-                    <div class="col-12" style="text-align: left; margin-top: 10px;">
+	<!-- Top bar: Burger icon, logo and About Us icon -->
+  <nav class="p-nav">
 
-                    <a href="home.html" class="navButtons" title="Home">Home</a>
-                    <a href="about.html" class="navButtons" title="About" >About us</a>
+    <div class="p-nav-left">
+        <!-- Burger icon, TODO @petercoyne menu -->
+        <a href="#" class="p-nav-a" onclick="toggleMenu()">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </a>
+        <!-- Site logo -->
+        <a href="home.html" class="p-logo">
+            <img src="./Logos/logo-no-text.png" alt="Logo">
+            <div>
+                <h1>Wild<b>Lands</b></h1>
+                <p>Endless Discoveries</p>
+            </div>
+        </a>
+    </div>
 
-                    </div>
-                </nav>
-				<!--Contact details in top bar-->
-                <div class="col-2"><a href="home.html" title="Home Page" class="name"><img src="Logos/Wildlands_Logo_Title.png" style="width:546px; height:144px" title="WLLogo" alt="WLLogo" class="centerLogo"> </a> </div>
-                <div class="container-fluid ">
-                <div class="col-12 text-white" style="text-align: right">
-                    <a href="www.facebook.com"></a><img src="Logos/facebook.png" width="1.5%" alt="Loc"></a>
-                    <a href="www.instagram.com"><img src="Logos/insta.png" width="2%" alt="Loc"></a>
-                    <img src="Logos/location.png" alt="Loc">31 Mallstreet, Galway
-                    <img src="Logos/phone.png" alt="Loc">091 312 543
-                    </div>
-                </div>
-            </div>
-            </div>
+    <div class="p-contact">
+        <a href="www.facebook.com"><img src="Logos/facebook.png" width="22" alt="Loc"></a>
+        <a href="www.instagram.com"><img src="Logos/insta.png" width="30" alt="Loc"></a>
+        <div>
+            <img src="Logos/location.png" alt="Loc"> 31 Mallstreet, Galway
         </div>
+        <div>
+            <img src="Logos/phone.png" alt="Loc"> 091 312 543
+        </div>
+    </div>
 
-	<!--contact form area -->
-  <div class="container-fluid">
-    <form name=contactForm id="contactForm" onsubmit="formSubmit()" class="formContent">
-  
-      <label class="formTitle" for="name">Contact Name</label><br>
-      <input class="formBox" type="text" id="name" name="contactName" placeholder="Your Name here.."><br>
-  
-      <label class="formTitle" for="contactEmail">Email Address</label><br>
-      <input class="formBox" type="email" id="contactEmail" name="contactEmail" placeholder="Your contact email.."><br>
-  
-      <label class="formTitle" for="subject">Subject</label><br>
-      <textarea class="formBox" id="subject" name="subject" placeholder="What would you like to ask us" style="height:200px"></textarea><br>
-  
-      <input type="submit" class="submitButton" value="Submit"><br>
-  
-    </form>
+    <!-- About Us link
+    <a href="about.html" class="p-nav-a">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    </a> -->
+
+</nav>
+<!-- Border below navbar -->
+<hr style="border: 1px solid black; margin: 0" />
+
+<!-- Quick Access menu -->
+<div id="p-quickaccess" style="display: none">
+    <a href="#" class="p-menuclose" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </a>
+    <div class="p-content">
+      <h1><a href="home.html">Home</a></h1>
+      <h1><a href="about.html">About</a></h1>
+        <h1>Counties</h1>
+    </div>
+</div>
+
+<div class="container topcontainer">
+  <div class="row">
+    <div class="col-9 aboutdetails">
+      <p> Welcome to the WildLands Website.</p>
+      <p> We are a group of developers creating rich content about places of interest such as historic areas, places to
+        eat ,adventure activities in Ireland </p>
+      <p> We offer loacalized information such as taxi contacts , bus time tables , hotels information etc.</p>
+    </div>
+
+    <div class="col-3">
+      <form name=contactForm id="contactForm" onsubmit="formSubmit()" class="formContent">
+
+        <label class="formTitle" for="name">Contact Name</label><br>
+        <input class="formBox" type="text" id="name" name="contactName" placeholder="Your Name here.."><br>
+
+        <label class="formTitle" for="contactEmail">Email Address</label><br>
+        <input class="formBox" type="email" id="contactEmail" name="contactEmail"
+          placeholder="Your contact email.."><br>
+
+        <label class="formTitle" for="subject">Subject</label><br>
+        <textarea class="formBox" id="subject" name="subject" placeholder="What would you like to ask us"
+          style="height:200px"></textarea><br>
+
+        <input type="submit" class="submitButton" value="Submit"><br>
+
+      </form>
+    </div>
   </div>
+</div>
+	<!--contact form area -->
+  
+
+
 
 		
 		
 		
-		<p> Welcome to the WildLands Website.</p>
-		<p> We are a group of developers creating rich content about places of interest such as historic areas, places to eat ,adventure activities in Ireland </p>  
-		<p> We offer loacalized information such as taxi contacts , bus time tables , hotels information etc.</p>
-		
+
 
 
   <!-- footer at bottom margin -->

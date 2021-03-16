@@ -41,8 +41,8 @@
 	float: right;
 	}
 .formContent {
-	margin-left: auto;
-	margin-right: 20%;
+	/* margin-left: auto;
+	margin-right: 20%; */
 	margin-bottom: fixed;
 	font-family: 'Questrial', sans-serif;
 	color: rgb(24, 202, 77);
@@ -50,7 +50,8 @@
 	text-decoration: none;
 	transition: all 0.5s ease-in-out 100ms;
 	display: block;
-	width: 150px;}
+	width: 150px;
+}
 .formBox {
 	padding: 5px;
 	border-radius: 8px;
@@ -72,9 +73,12 @@
 	display: block;
 	width: 150px;
 
-	} 
+} 
 
-	} */
+.topcontainer {
+	margin-top: 3rem;
+}
+
 .p-nav {
 	color: white;
 	display: flex;
