@@ -13,6 +13,10 @@
 	background: url("Photos/AboutUs_Landscape.jpg") no-repeat center center fixed;
 	background-size: cover;
 	}
+.booking {
+	background: url("Photos/Booking_Landscape.jpg") no-repeat center center fixed;
+	background-size: cover;
+	}
 
 #animation {
     width: 100px;
@@ -77,6 +81,12 @@
 
 .topcontainer {
 	margin-top: 3rem;
+}
+.bookingFont{
+	font-family: 'Questrial', sans-serif;
+	font-size: x-large;
+	color: rgb(250, 255, 250);
+	padding: 10px;
 }
 
 .p-nav {
